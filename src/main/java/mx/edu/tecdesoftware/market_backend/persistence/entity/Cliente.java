@@ -1,5 +1,5 @@
 package mx.edu.tecdesoftware.market_backend.persistence.entity;
-
+import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,6 +17,15 @@ public class Cliente {
     @Column(name = "correo_electronico")
     private String correoElectronico;
 
+    // un cliente tiene muchas compras
+
+    @OneToMany(mappedBy = "cliente")
+    private  List<Compra> compras;
+
+
+
+
+    //Getter and Setter
     public String getId() {
         return id;
     }

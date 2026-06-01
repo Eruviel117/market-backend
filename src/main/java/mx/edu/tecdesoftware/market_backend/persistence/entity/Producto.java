@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "productos")
-public class producto {
+public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +29,19 @@ public class producto {
 
     @Column(name = "estado")
     private Boolean estado;
+
+
+
+    // Parcial dos unio de clases
+
+
+
+
+
+
+
+
+
 
     // Getters y Setters
     public Integer getIdProducto() { return idProducto; }

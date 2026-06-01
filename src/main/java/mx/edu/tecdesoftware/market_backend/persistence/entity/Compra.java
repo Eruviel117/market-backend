@@ -2,10 +2,11 @@ package mx.edu.tecdesoftware.market_backend.persistence.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "compras")
-public class compra {
+public class Compra {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +24,22 @@ public class compra {
     private String comentario;
 
     private String estado;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Getters y Setters
     public Integer getIdCompra() { return idCompra; }
