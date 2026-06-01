@@ -1,10 +1,13 @@
 package mx.edu.tecdesoftware.market_backend.persistence.entity;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "categorias")
 public class Categoria {
+
+    /* Realcion a la base de datos  */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
@@ -15,6 +18,29 @@ public class Categoria {
     private Boolean estado;
 
 
+    /*   */
+    @OneToMany(mappedBy = "categoria ")
+    private List<Producto > productos;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Getter and setter */
 
     public Boolean getEstado() {
         return estado;
