@@ -30,6 +30,10 @@ public class Producto {
     @Column(name = "estado")
     private Boolean estado;
 
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
+
 
 
     // Parcial dos unio de clases
@@ -64,4 +68,10 @@ public class Producto {
 
     public Boolean getEstado() { return estado; }
     public void setEstado(Boolean estado) { this.estado = estado; }
+
+    public Categoria getCategoria() { return categoria; }
+    public void setCategoria(Categoria categoria) { this.categoria = categoria; }
+
+
+
 }
