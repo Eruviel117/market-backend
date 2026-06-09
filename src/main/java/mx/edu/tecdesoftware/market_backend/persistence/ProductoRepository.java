@@ -5,6 +5,7 @@ import mx.edu.tecdesoftware.market_backend.domain.repository.ProductRepository;
 import mx.edu.tecdesoftware.market_backend.persistence.crud.ProductoCrudRepository;
 import mx.edu.tecdesoftware.market_backend.persistence.entity.Producto;
 import mx.edu.tecdesoftware.market_backend.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +14,10 @@ import java.util.Optional;
 @Repository
 public class ProductoRepository implements ProductRepository {
 
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+
+    @Autowired
     private ProductMapper productMapper;
     //select *from productos
     public List<Product> getAll(){
@@ -29,7 +33,7 @@ public class ProductoRepository implements ProductRepository {
         return Optional.of(productMapper.toProducts(productos.get()));
     }
     //obtener un producto dado el id
-    public Optional<Product>getProductoById(int productId){
+    public Optional<Product>getProduct(int productId){
         return productoCrudRepository.findById(productId).map(producto -> productMapper.toProduct(producto));
     }
 
