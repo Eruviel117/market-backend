@@ -12,7 +12,6 @@ public class CompraProducto {
     private Double total;
     private Boolean estado;
 
-
     //saber todos los productos que hay en una compra
     @ManyToOne
     @JoinColumn( name = "id_compra",insertable = false, updatable = false)
@@ -21,26 +20,6 @@ public class CompraProducto {
     @ManyToOne
     @JoinColumn( name = "id_producto",insertable = false, updatable = false)
     private Producto producto;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public CompraProductoPK getId() {
         return id;
