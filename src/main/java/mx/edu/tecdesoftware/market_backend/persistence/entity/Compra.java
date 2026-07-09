@@ -25,21 +25,8 @@ public class Compra {
 
     private String estado;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @OneToMany(mappedBy = "compra", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CompraProducto> productos;
 
     // Getters y Setters
     public Integer getIdCompra() { return idCompra; }
@@ -60,5 +47,6 @@ public class Compra {
     public String getEstado() { return estado; }
     public void setEstado(String estado) { this.estado = estado; }
 
-
+    public List<CompraProducto> getProductos() { return productos; }
+    public void setProductos(List<CompraProducto> productos) { this.productos = productos; }
 }
