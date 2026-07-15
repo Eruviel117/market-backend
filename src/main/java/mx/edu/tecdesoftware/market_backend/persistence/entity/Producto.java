@@ -38,15 +38,6 @@ public class Producto {
 
     // Parcial dos unio de clases
 
-
-
-
-
-
-
-
-
-
     // Getters y Setters
     public Integer getIdProducto() { return idProducto; }
     public void setIdProducto(Integer idProducto) { this.idProducto = idProducto; }

@@ -19,7 +19,7 @@ public interface ProductoCrudRepository extends CrudRepository<Producto, Integer
     List<Producto > findByIdCategoriaOrderByNombreAsc(int idCategoria );
 
     //obtener los procesos
-    Optional<List<Producto>> findCantidadStockLessThanAndEstado(int cantidad, boolean estado );
+    Optional<List<Producto>> findByCantidadStockLessThanAndEstado(int cantidad, boolean estado );
     Optional<List<Producto>> findByCantidadStockLessThanAndEstado(Integer cantidadStock, Boolean estado);
 
 

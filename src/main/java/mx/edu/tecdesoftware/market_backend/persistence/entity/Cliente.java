@@ -3,7 +3,7 @@ import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "clientes")
 public class Cliente {
 
     @Id
@@ -16,14 +16,6 @@ public class Cliente {
 
     @Column(name = "correo_electronico")
     private String correoElectronico;
-
-    // un cliente tiene muchas compras
-
-    @OneToMany(mappedBy = "cliente")
-    private  List<Compra> compras;
-
-
-
 
     //Getter and Setter
     public String getId() {
@@ -72,13 +64,5 @@ public class Cliente {
 
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
-    }
-
-    public List<Compra> getCompras() {
-        return compras;
-    }
-
-    public void setCompras(List<Compra> compras) {
-        this.compras = compras;
     }
 }

@@ -19,26 +19,10 @@ public class Categoria {
 
 
     /*   */
-    @OneToMany(mappedBy = "categoria ")
+    @OneToMany(mappedBy = "categoria")
     private List<Producto > productos;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
     /* Getter and setter */
 
