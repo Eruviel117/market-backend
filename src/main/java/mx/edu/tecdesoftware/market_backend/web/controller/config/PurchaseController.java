@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/purchases")
+@CrossOrigin(origins = "*")
 @Tag(name = "Purchase", description = "Manage purchases in the store")
 public class PurchaseController {
 
